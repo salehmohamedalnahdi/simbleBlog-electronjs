@@ -1,0 +1,56 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://jsonplaceholder.typicode.com">
+    <link rel="stylesheet" href="style.css">
+    <title> welcom to createBlog page </title>
+ 
+  
+  </head>
+ <body class="">
+  <nav >
+    <div class="title-signup">
+      <h1>Welcome To Simple Blog</h1>
+      <a  href="#">
+          <h2>login</h2>
+      </a>
+      <a  href="#">
+          <h2>signup</h2>
+      </a>
+      </div>
+     <div class="pages">
+     <a  href="home.html">
+          <h2 >Home</h2>
+      </a>
+      <a  href="#">
+          <h2>About</h2>
+      </a>
+      <a  href="createBlog.html">
+          <h2>Create</h2>
+      </a>
+     </div>
+    </nav>
+
+    <div class="content-form">
+        <form class="form" method="post">
+              <label for="title">Title </label>
+              <input id="title" class="input-title" type="text" name="title" required>
+              <label for="content">Content  </label>
+              <textarea class="textarea" id="content" name="content" required></textarea>
+              <button id="submit" class="submit" type="submit">Submit</button>
+          </form>
+    </div>
+  <footer >
+    <p></p>
+  </footer>
+  <script src="./createBlog.js">
+      
+  </script>
+</body>
+
+  </html>
