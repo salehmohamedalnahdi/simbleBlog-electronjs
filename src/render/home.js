@@ -1,17 +1,18 @@
 
 const HandleDelete=async(id)=>{
-  const response= await fetch('https://jsonplaceholder.typicode.com/posts/'+id, {
+  const response= await fetch('https://simbleblog-backend.onrender.com/delete/'+id, {
             method: 'DELETE',
           });
         const result= await response.json();
         console.log(result);
         window.location.href = "home.html"
+        //window.location.reload()
 }
 
 onload= async() => {
     const main=document.getElementById('main')
 
-    const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+    const response = await fetch('https://simbleblog-backend.onrender.com/blogs');
     const result = await response.json();
     result.forEach((data)=>{
       const container=`<div class="container-title-delete"">
@@ -21,8 +22,8 @@ onload= async() => {
       </div>
     </div>
     <div class="content-createdAt">
-        <article class="artcle">Content: ${data.body}</article>
-        <div class="createdAt"><span>CreatedAt:</span></div>
+        <article class="artcle">Content: ${data.content}</article>
+        <div class="createdAt"><span>CreatedAt: ${data.createdAt}</span></div>
         </div>`
      main.innerHTML+=container
     })

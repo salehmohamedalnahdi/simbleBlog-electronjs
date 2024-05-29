@@ -2,12 +2,11 @@
 
 let create=async(title,content)=>{
     
-    const response=await fetch('https://jsonplaceholder.typicode.com/posts', {
+    const response=await fetch('https://simbleblog-backend.onrender.com/create', {
      method: 'POST',
      body: JSON.stringify({
        title: title,
-       body: content,
-       userId: 11,
+       content: content,
      }),
      headers: {
        'Content-type': 'application/json; charset=UTF-8',

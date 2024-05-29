@@ -1,10 +1,11 @@
 console.log("working;")
-const { app, BrowserWindow ,ipcMain} = require('electron')
+const { app, BrowserWindow ,Menu} = require('electron')
 const path=require("path")
 const url=require("url")
 
 let win
 const createWindow = () => {
+  Menu.setApplicationMenu(null);
      win = new BrowserWindow({
       width: 800,
       height: 600,
